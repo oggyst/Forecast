@@ -16,16 +16,18 @@ function unitChange(select) {
 }
 // Funkcija za trenutno vreme (day = 0)
 function current() {
-  document.getElementById("temp").style.fontSize = "8rem";
+  document.getElementById("temp").style.fontSize = "4rem";
   $('#city').html(token.location.name + "<br>Current");
-  $('#temp').html(Math.round(token.current.temp_c) + '&#8451;');
+
   $('#icon').attr('src', "http:" + token.current.condition.icon);
   if (chossen === "metric") {
-    $('#temp').html(Math.round(token.current.temp_c) + "&#8451");
-    $('#desc').html(token.current.condition.text + "<br>Wind speed:" + token.current.wind_kph + "kph");
+    $('#temp').html(Math.round(token.current.temp_c) + "&#8451 <br>Feal:<br>"+Math.round(token.current.feelslike_c)+ "&#8451" );
+    $('#desc').html(token.current.condition.text + "<br>Wind speed:" + token.current.wind_kph + "kph <br>Humidity:" + token.current.humidity + "%<br> UV:"
+  +token.current.uv);
   } else if (chossen === "imperial") {
-    $('#temp').html(Math.round(token.current.temp_f) + "&#8457;");
-    $('#desc').html(token.current.condition.text + "<br>Wind speed:" + token.current.wind_mph + "mph");
+    $('#temp').html(Math.round(token.current.temp_f) + "&#8457 <br>Feal:<br>"+Math.round(token.current.feelslike_f)+ "&#8457");
+    $('#desc').html(token.current.condition.text + "<br>Wind speed:" + token.current.wind_mph + "mph <br>Humidity:" + token.current.humidity+"%<br> UV:"
+  +token.current.uv);
   }
 }
 //Ubacivanje u HTML-u info od izabranog dana(datuma)
@@ -75,6 +77,7 @@ function updateCity() {
         // console.log(data);
         token = data;
         current();
+        //dobijanje index-a dana za listu
         for (var i = 0; i < data.forecast.forecastday.length; i++) {
           date = (data.forecast.forecastday[i].date)
           $("#" + (i + 1)).html(getDayOfWeek(date))
