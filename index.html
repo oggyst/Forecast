@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<title>Forecast</title>
-
 <head>
+	<title>Forecast</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Forecast">
 	<meta name="keywords" content="HTML,CSS,bootstrap,JavaScript">
@@ -28,23 +27,22 @@
 			<div class="row">
 				<p id="desc" class="min-vw-100 text-center"></p>
 			</div>
-			<form class="form-inline md-form form-sm">
-				<input class="form-control form-control-sm mr-3 w-75" id="citySearchBar" type="text" placeholder="Search city" aria-label="Search">
-				<i class="fas fa-search" aria-hidden="true"></i>
-			</form>
+			<input class="form-control form-control-sm mr-3 w-75" id="citySearchBar" type="text" placeholder="Search city" aria-label="Search">
+			<i class="fas fa-search" aria-hidden="true"></i>
+
 		</div>
 
 		<form>
 			<div class="form-row">
 				<div class="col-xs-6 col-sm-4">
-					<label for="unitTemp"> Select unit for temperature: </label>
+					<label> Select unit for temperature: </label>
 					<select onchange="tempUnitChange(this)">
 						<option selected id="celsius">&#8451;</option>
 						<option id="fahrenheit">&#8457;</option>
 					</select>
 				</div>
 				<div class="col-xs-6 col-sm-4">
-					<label for="unitDist"> Select unit for ditance:</label>
+					<label> Select unit for ditance:</label>
 					<select onchange="distUnitChange(this)">
 						<option selected id="km">Kilometers</option>
 						<option id="m">Miles</option>
@@ -157,6 +155,8 @@
 		</div>
 
 	</div>
+
+
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
