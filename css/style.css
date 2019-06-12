@@ -1,0 +1,72 @@
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+div {
+  font-size: 15px;
+}
+
+p {
+  font-size: 20px
+}
+
+.city {
+  font-size: 30px;
+}
+
+body {
+  background-color: #efefef;
+  height: 100%;
+}
+
+.wrapper {
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.checkbox {
+  &+.switchbox {
+    background-color: #e74c3c;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+    width: 60px;
+
+    &:after {
+      background-color: #fff;
+      border-radius: 20px;
+      content: ' ';
+      display: block;
+      height: 30px;
+      position: absolute;
+      right: 50%;
+      transition: all .1s linear;
+      width: 50%;
+    }
+  }
+
+  &:checked {
+    &+.switchbox {
+      background-color: #2ecc71;
+
+      &:after {
+        right: 0%;
+      }
+    }
+  }
+}

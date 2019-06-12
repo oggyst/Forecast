@@ -1,57 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<title>Forecast</title>
 
 <head>
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-	<script src="logic.js"></script>
-
-
-	<title>Forecast</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Forecast">
+	<meta name="keywords" content="HTML,CSS,bootstrap,JavaScript">
+	<meta name="author" content="Ognjen">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
+
 <body>
-	<div class="container">
 
-		<div class="align-items-center">
-			<input class=" w-75 p-3" id="cityName" type="text" placeholder="Search by city name" aria-label="Search">
-			<span class="input-group-btn">
-				<button class="input-group-btn" type="submit" onclick="onClick()">Enter</button>
-				<div class="dropdown">
-					<button onclick="newDay()" class="dropbtn">Pick a date</button>
-					<div id="datePick" class="dropdown-content" onclick="newDay()">
-						<a onclick="day(0)">Current</a>
-						<a onclick="day(1)" id="1"></a>
-						<a onclick="day(2)" id="2"></a>
-						<a onclick="day(3)" id="3"></a>
-						<a onclick="day(4)" id="4"></a>
-						<a onclick="day(5)" id="5"></a>
-						<a onclick="day(6)" id="6"></a>
-						<a onclick="day(7)" id="7"></a>
-					</div>
+	<div class="container-fluid mx-auto min-vw-100 ">
 
-					<select onchange="unitChange(this)">
-						<option id="metric">Metric</option>
-						<option id="imperial">Imperial</option>
+
+		<div class="current">
+			<h1 id="city" class="min-vw-100 text-center"></h1>
+			<div class="row">
+				<img src="" alt="icon" id="icon" class=" rounded mx-auto d-block centered">
+			</div>
+			<div class="row">
+				<p id="temp" class="min-vw-100 text-center"></p>
+			</div>
+			<div class="row">
+				<p id="desc" class="min-vw-100 text-center"></p>
+			</div>
+			<form class="form-inline md-form form-sm">
+				<input class="form-control form-control-sm mr-3 w-75" id="citySearchBar" type="text" placeholder="Search city" aria-label="Search">
+				<i class="fas fa-search" aria-hidden="true"></i>
+			</form>
+		</div>
+
+		<form>
+			<div class="form-row">
+				<div class="col-xs-6 col-sm-4">
+					<label for="unitTemp"> Select unit for temperature: </label>
+					<select onchange="tempUnitChange(this)">
+						<option selected id="celsius">&#8451;</option>
+						<option id="fahrenheit">&#8457;</option>
+					</select>
+				</div>
+				<div class="col-xs-6 col-sm-4">
+					<label for="unitDist"> Select unit for ditance:</label>
+					<select onchange="distUnitChange(this)">
+						<option selected id="km">Kilometers</option>
+						<option id="m">Miles</option>
 					</select>
 				</div>
 			</div>
-		</div>
-			<div>
-				<h2 id="city" class="min-vw-100 text-center"></h2>
-				<div class=" row ">
-					<img src="" alt="icon" id="icon" class="rounded mx-auto d-block">
-				</div>
-				<div class="row  align-middle ">
-					<h1 id="temp" class="min-vw-100 text-center"></h1>
-				</div>
-				<div class="row">
-					<h3 id="desc" class="min-vw-100 text-center align-middle"></h3>
-				</div>
-			</div>
-		</div>
-	</div>
+		</form>
+		<div class="table-responsive">
 
-</html>
+			<table class="table table-hover table-striped table-bordered">
+				<tr>
+					<th>Day:</th>
+					<th>Condition</th>
+					<th>Max temp:</th>
+					<th>Min temp</th>
+					<th>Avg temp</th>
+					<th>Max wind speed</th>
+					<th>Total precipitation</th>
+					<th>Average visibility</th>
+					<th>Average humidity</th>
+					<th>UV index</th>
+					<th>Sunrise/ sunset</th>
+				</tr>
+
+				<tr>
+					<td id="date0">date</td>
+					<td id="condition0">condition</td>
+					<td id="maxTemp0">c</td>
+					<td id="minTemp0">d</td>
+					<td id="avgTemp0">e</td>
+					<td id="maxWind0">f</td>
+					<td id="totalPrecip0">g</td>
+					<td id="avgVis0">h</td>
+					<td id="avgHumidity0"></td>
+					<td id="uv0">i</td>
+					<td id="sun0">i</td>
+				<tr>
+					<td id="date1">date</td>
+					<td id="condition1">condition</td>
+					<td id="maxTemp1">c</td>
+					<td id="minTemp1">d</td>
+					<td id="avgTemp1">e</td>
+					<td id="maxWind1">f</td>
+					<td id="totalPrecip1">g</td>
+					<td id="avgVis1">h</td>
+					<td id="avgHumidity1"></td>
+					<td id="uv1">i</td>
+					<td id="sun1">i</td>
+				<tr>
+					<td id="date2">date</td>
+					<td id="condition2">condition</td>
+					<td id="maxTemp2">c</td>
+					<td id="minTemp2">d</td>
+					<td id="avgTemp2">e</td>
+					<td id="maxWind2">f</td>
+					<td id="totalPrecip2">g</td>
+					<td id="avgVis2">h</td>
+					<td id="avgHumidity2"></td>
+					<td id="uv2">i</td>
+					<td id="sun2">i</td>
+				<tr>
+					<td id="date3">date</td>
+					<td id="condition3">condition</td>
+					<td id="maxTemp3">c</td>
+					<td id="minTemp3">d</td>
+					<td id="avgTemp3">e</td>
+					<td id="maxWind3">f</td>
+					<td id="totalPrecip3">g</td>
+					<td id="avgVis3">h</td>
+					<td id="avgHumidity3"></td>
+					<td id="uv3">i</td>
+					<td id="sun3">i</td>
+				<tr>
+					<td id="date4">date</td>
+					<td id="condition4">condition</td>
+					<td id="maxTemp4">c</td>
+					<td id="minTemp4">d</td>
+					<td id="avgTemp4">e</td>
+					<td id="maxWind4">f</td>
+					<td id="totalPrecip4">g</td>
+					<td id="avgVis4">h</td>
+					<td id="avgHumidity4"></td>
+					<td id="uv4">i</td>
+					<td id="sun4">i</td>
+				<tr>
+					<td id="date5">date</td>
+					<td id="condition5">condition</td>
+					<td id="maxTemp5">c</td>
+					<td id="minTemp5">d</td>
+					<td id="avgTemp5">e</td>
+					<td id="maxWind5">f</td>
+					<td id="totalPrecip5">g</td>
+					<td id="avgVis5">h</td>
+					<td id="avgHumidity5"></td>
+					<td id="uv5">i</td>
+					<td id="sun5">i</td>
+				<tr>
+					<td id="date6">date</td>
+					<td id="condition6">condition</td>
+					<td id="maxTemp6">c</td>
+					<td id="minTemp6">d</td>
+					<td id="avgTemp6">e</td>
+					<td id="maxWind6">f</td>
+					<td id="totalPrecip6">g</td>
+					<td id="avgVis6">h</td>
+					<td id="avgHumidity6"></td>
+					<td id="uv6">i</td>
+					<td id="sun6">i</td>
+			</table>
+		</div>
+
+	</div>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="js/logic.js"></script>
+
+</body>
