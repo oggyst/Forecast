@@ -1,4 +1,4 @@
 root = true
-[*.{cpp,h,cs,xaml,editorconfig}]
+[*.{html,js,css,editorconfig}]
 indent_style = space
 indent_size = 4
