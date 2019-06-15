@@ -5,10 +5,14 @@ td, th {
   border-collapse: collapse;
 }
 
+
 div {
   font-size: 15px;
 }
+table {
+	text-align: center;
 
+}
 img {
   flex-shrink: 0;
 }
@@ -44,7 +48,7 @@ body {
 
 #text {
   float: left;
-  width: 700px;
+  /* width: 700px; */
   height: 300px;
   margin-left: 20px;
   display: block;

@@ -5,171 +5,173 @@
 
 	<title>Forecast</title>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta name="description" content="Forecast">
 	<meta name="keywords" content="HTML,CSS,bootstrap,JavaScript">
 	<meta name="author" content="Ognjen">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 
 <body>
 
-	<div class="container-fluid mx-auto min-vw-100 ">
+	<div class="container-fluid mx-auto min-vw-100">
 
 
-		<div class="current row">
+		<div class="current row ">
 
 			<div class="center-block">
-				<h1>Weather forecast</h1>
+				<h1 style="margin-left:42px;">Weather forecast</h1>
 			</div>
 			<input class="form-control form-control-sm mr-3 w-75" style="margin-left: 20px;margin-top: 20px;margin-bottom: 20px;" id="citySearchBar" type="text" placeholder="Search city" aria-label="Search">
 			<i class="fas fa-search" aria-hidden="true"></i>
 		</div>
-		<div id="iconDiv">
-			<img src"" alt="icon" id="icon" class=" rounded mx-auto d-block center">
+		<div id="iconDiv" class="">
+			<img src"" alt="icon" id="icon" style="height:62.5%;width:100%;" class="rounded mx-auto d-block center">
 		</div>
 		<div id="text">
 			<div>
 				<h1 id="city"></h1>
-				<h2 id="descText"></h2>
+				<p id="temp" style="margin-bottom:0px;"></p>
+				<h2 id="descText" style="margin-top:0px;margin-bottom:0px;"></h2>
 				<p id="desc" style="margin-bottom:0px;"></p>
 
-				<p id="temp" style="margin-bottom:0px;" ></p>
+
 			</div>
 		</div>
 		<form>
 			<div class="row">
-				<div class="col-xs-6 col-sm-4">
-					<label> Select unit for temperature: </label>
-					<select onchange="tempUnitChange(this)">
+				<div class="col-6 row" style="margin-left:15px;margin-right:5px;margin-top:20px;">
+					<label> Select unit for temperature: &nbsp;&nbsp;&nbsp;&nbsp; </label>
+					<select style="width:100px;text" onchange="tempUnitChange(this)">
 						<option selected id="celsius">&#8451;</option>
 						<option id="fahrenheit">&#8457;</option>
 					</select>
 				</div>
-
-				<div class="col-xs-6 col-sm-4">
-					<label> Select unit for distance:</label>
-					<select onchange="distUnitChange(this)">
+				</br>
+				<div class="row col-sm-12" style="margin-left:15px;margin-top:15px; margin-right:5px;">
+					<label> Select unit for distance:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+					<select style="width:100px;" onchange="distUnitChange(this)">
 						<option selected id="km">Kilometers</option>
 						<option id="m">Miles</option>
 					</select>
 				</div>
 			</div>
 		</form>
+		<div class="container min-vw-100" style="margin:0px">
+			<div class="table-responsive .text-nowrap">
+				<table class="table table-hover  border-bottom">
+					<thead>
 
-		<div class="table-responsive .text-nowrap">
-			<table class="table table-hover  border-bottom">
-				<thead>
+						<tr>
+							<th colspan="3">
+								<h1 style="text-align:left;">Forecast</h1>
+							</th>
+							<th>Min temp</th>
+							<th>Max temp</th>
+							<th>Avg temp</th>
+							<th>Max wind speed</th>
+							<th>Total precipitation</th>
+							<th>Average visibility</th>
+							<th>Average humidity</th>
+							<th>UV index</th>
+							<th>Sunrise/ sunset</th>
+						</tr>
 
-					<tr>
-						<th colspan="3">
-							<h1>Forecast</h1>
-						</th>
-						<th>Min temp</th>
-						<th>Max temp:</th>
-						<th>Avg temp</th>
-						<th>Max wind speed</th>
-						<th>Total precipitation</th>
-						<th>Average visibility</th>
-						<th>Average humidity</th>
-						<th>UV index</th>
-						<th>Sunrise/ sunset</th>
-					</tr>
+						<tr>
+							<td id="date0">date</td>
+							<td id="icon0" onload="">icon </td>
+							<td id="condition0">condition</td>
+							<td id="minTemp0">d</td>
+							<td id="maxTemp0">c</td>
+							<td id="avgTemp0">e</td>
+							<td id="maxWind0">f</td>
+							<td id="totalPrecip0">g</td>
+							<td id="avgVis0">h</td>
+							<td id="avgHumidity0"></td>
+							<td id="uv0">i</td>
+							<td id="sun0">i</td>
+						<tr>
+							<td id="date1">date</td>
+							<td id="icon1">icon</td>
+							<td id="condition1">condition</td>
+							<td id="minTemp1">d</td>
+							<td id="maxTemp1">c</td>
+							<td id="avgTemp1">e</td>
+							<td id="maxWind1">f</td>
+							<td id="totalPrecip1">g</td>
+							<td id="avgVis1">h</td>
+							<td id="avgHumidity1"></td>
+							<td id="uv1">i</td>
+							<td id="sun1">i</td>
+						<tr>
+							<td id="date2">date</td>
+							<td id="icon2">icon</td>
+							<td id="condition2">condition</td>
+							<td id="minTemp2">d</td>
+							<td id="maxTemp2">c</td>
+							<td id="avgTemp2">e</td>
+							<td id="maxWind2">f</td>
+							<td id="totalPrecip2">g</td>
+							<td id="avgVis2">h</td>
+							<td id="avgHumidity2"></td>
+							<td id="uv2">i</td>
+							<td id="sun2">i</td>
+						<tr>
+							<td id="date3">date</td>
+							<td id="icon3">icon</td>
+							<td id="condition3">condition</td>
+							<td id="minTemp3">d</td>
+							<td id="maxTemp3">c</td>
+							<td id="avgTemp3">e</td>
+							<td id="maxWind3">f</td>
+							<td id="totalPrecip3">g</td>
+							<td id="avgVis3">h</td>
+							<td id="avgHumidity3"></td>
+							<td id="uv3">i</td>
+							<td id="sun3">i</td>
+						<tr>
+							<td id="date4">date</td>
+							<td id="icon4">icon</td>
+							<td id="condition4">condition</td>
+							<td id="minTemp4">d</td>
+							<td id="maxTemp4">c</td>
+							<td id="avgTemp4">e</td>
+							<td id="maxWind4">f</td>
+							<td id="totalPrecip4">g</td>
+							<td id="avgVis4">h</td>
+							<td id="avgHumidity4"></td>
+							<td id="uv4">i</td>
+							<td id="sun4">i</td>
+						<tr>
+							<td id="date5">date</td>
+							<td id="icon5">icon</td>
+							<td id="condition5">condition</td>
+							<td id="minTemp5">d</td>
+							<td id="maxTemp5">c</td>
+							<td id="avgTemp5">e</td>
+							<td id="maxWind5">f</td>
+							<td id="totalPrecip5">g</td>
+							<td id="avgVis5">h</td>
+							<td id="avgHumidity5"></td>
+							<td id="uv5">i</td>
+							<td id="sun5">i</td>
+						<tr>
+							<td id="date6">date</td>
+							<td id="icon6">icon</td>
+							<td id="condition6">condition</td>
+							<td id="minTemp6">d</td>
+							<td id="maxTemp6">c</td>
+							<td id="avgTemp6">e</td>
+							<td id="maxWind6">f</td>
+							<td id="totalPrecip6">g</td>
+							<td id="avgVis6">h</td>
+							<td id="avgHumidity6"></td>
+							<td id="uv6">i</td>
+							<td id="sun6">i</td>
+					</thead>
 
-					<tr>
-						<td id="date0">date</td>
-						<th id="icon0">icon </th>
-						<td id="condition0">condition</td>
-						<td id="minTemp0">d</td>
-						<td id="maxTemp0">c</td>
-						<td id="avgTemp0">e</td>
-						<td id="maxWind0">f</td>
-						<td id="totalPrecip0">g</td>
-						<td id="avgVis0">h</td>
-						<td id="avgHumidity0"></td>
-						<td id="uv0">i</td>
-						<td id="sun0">i</td>
-					<tr>
-						<td id="date1">date</td>
-						<td id="icon1">icon</td>
-						<td id="condition1">condition</td>
-						<td id="minTemp1">d</td>
-						<td id="maxTemp1">c</td>
-						<td id="avgTemp1">e</td>
-						<td id="maxWind1">f</td>
-						<td id="totalPrecip1">g</td>
-						<td id="avgVis1">h</td>
-						<td id="avgHumidity1"></td>
-						<td id="uv1">i</td>
-						<td id="sun1">i</td>
-					<tr>
-						<td id="date2">date</td>
-						<td id="icon2">icon</td>
-						<td id="condition2">condition</td>
-						<td id="minTemp2">d</td>
-						<td id="maxTemp2">c</td>
-						<td id="avgTemp2">e</td>
-						<td id="maxWind2">f</td>
-						<td id="totalPrecip2">g</td>
-						<td id="avgVis2">h</td>
-						<td id="avgHumidity2"></td>
-						<td id="uv2">i</td>
-						<td id="sun2">i</td>
-					<tr>
-						<td id="date3">date</td>
-						<td id="icon3">icon</td>
-						<td id="condition3">condition</td>
-						<td id="minTemp3">d</td>
-						<td id="maxTemp3">c</td>
-						<td id="avgTemp3">e</td>
-						<td id="maxWind3">f</td>
-						<td id="totalPrecip3">g</td>
-						<td id="avgVis3">h</td>
-						<td id="avgHumidity3"></td>
-						<td id="uv3">i</td>
-						<td id="sun3">i</td>
-					<tr>
-						<td id="date4">date</td>
-						<td id="icon4">icon</td>
-						<td id="condition4">condition</td>
-						<td id="minTemp4">d</td>
-						<td id="maxTemp4">c</td>
-						<td id="avgTemp4">e</td>
-						<td id="maxWind4">f</td>
-						<td id="totalPrecip4">g</td>
-						<td id="avgVis4">h</td>
-						<td id="avgHumidity4"></td>
-						<td id="uv4">i</td>
-						<td id="sun4">i</td>
-					<tr>
-						<td id="date5">date</td>
-						<td id="icon5">icon</td>
-						<td id="condition5">condition</td>
-						<td id="minTemp5">d</td>
-						<td id="maxTemp5">c</td>
-						<td id="avgTemp5">e</td>
-						<td id="maxWind5">f</td>
-						<td id="totalPrecip5">g</td>
-						<td id="avgVis5">h</td>
-						<td id="avgHumidity5"></td>
-						<td id="uv5">i</td>
-						<td id="sun5">i</td>
-					<tr>
-						<td id="date6">date</td>
-						<td id="icon6">icon</td>
-						<td id="condition6">condition</td>
-						<td id="minTemp6">d</td>
-						<td id="maxTemp6">c</td>
-						<td id="avgTemp6">e</td>
-						<td id="maxWind6">f</td>
-						<td id="totalPrecip6">g</td>
-						<td id="avgVis6">h</td>
-						<td id="avgHumidity6"></td>
-						<td id="uv6">i</td>
-						<td id="sun6">i</td>
-				</thead>
-
-			</table>
+				</table>
+			</div>
 		</div>
 
 	</div>
