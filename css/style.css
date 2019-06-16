@@ -1,15 +1,26 @@
 td, th {
-  border: 1px solid #dddddd;
-  text-align: center;
+  /* text-align: center; */
   padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
+  border-top: 1px solid black;
+  border-collapse: collapse;
 }
 
 div {
   font-size: 15px;
+}
+
+table {
+  text-align: center;
+}
+
+select {
+  border-color: #666;
+  border-style: solid;
+  border-width: 0 0 2px 0;
+}
+
+img {
+  flex-shrink: 0;
 }
 
 p {
@@ -35,38 +46,17 @@ body {
   display: none;
 }
 
-.checkbox {
-  &+.switchbox {
-    background-color: #e74c3c;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    cursor: pointer;
-    display: inline-block;
-    height: 30px;
-    overflow: hidden;
-    position: relative;
-    width: 60px;
+#iconDiv {
+  float: left;
+  width: 180px;
+  height: 300px;
+}
 
-    &:after {
-      background-color: #fff;
-      border-radius: 20px;
-      content: ' ';
-      display: block;
-      height: 30px;
-      position: absolute;
-      right: 50%;
-      transition: all .1s linear;
-      width: 50%;
-    }
-  }
-
-  &:checked {
-    &+.switchbox {
-      background-color: #2ecc71;
-
-      &:after {
-        right: 0%;
-      }
-    }
-  }
+#text {
+  float: left;
+  /* width: 700px; */
+  height: 300px;
+  margin-left: 20px;
+  display: block;
+  overflow: auto;
 }
