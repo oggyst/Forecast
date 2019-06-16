@@ -1,20 +1,15 @@
 td, th {
-  /* text-align: center; */
+  border: 1px solid #dddddd;
+  text-align: center;
   padding: 8px;
-  border-top: 1px solid black;
-  border-collapse: collapse;
 }
 
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
 
 div {
   font-size: 15px;
-}
-table {
-	text-align: center;
-
-}
-img {
-  flex-shrink: 0;
 }
 
 p {
@@ -40,17 +35,38 @@ body {
   display: none;
 }
 
-#iconDiv {
-  float: left;
-  width: 180px;
-  height: 300px;
-}
+.checkbox {
+  &+.switchbox {
+    background-color: #e74c3c;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+    width: 60px;
 
-#text {
-  float: left;
-  /* width: 700px; */
-  height: 300px;
-  margin-left: 20px;
-  display: block;
-  overflow: auto;
+    &:after {
+      background-color: #fff;
+      border-radius: 20px;
+      content: ' ';
+      display: block;
+      height: 30px;
+      position: absolute;
+      right: 50%;
+      transition: all .1s linear;
+      width: 50%;
+    }
+  }
+
+  &:checked {
+    &+.switchbox {
+      background-color: #2ecc71;
+
+      &:after {
+        right: 0%;
+      }
+    }
+  }
 }
