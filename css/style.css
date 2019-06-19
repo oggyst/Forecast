@@ -1,19 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+
+}
+h1 {
+	margin-left:15px;
+}
 td, th {
   /* text-align: center; */
-  padding: 8px;
+  padding: 0px;
   border-top: 1px solid black;
   border-collapse: collapse;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
-div {
-  font-size: 15px;
+#tempDiv {
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+#distDiv {
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-right: 0px;
 }
 
 table {
   text-align: center;
+  width: 100%;
 }
 
 select {
+  width: 100px;
   border-color: #666;
   border-style: solid;
   border-width: 0 0 2px 0;
@@ -23,9 +43,25 @@ img {
   flex-shrink: 0;
 }
 
-p {
-  font-size: 20px
+table {
+  font-size: 15px;
+
 }
+
+#temp {
+  margin-bottom: 0px;
+}
+
+#descText {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#des {
+  margin-bottom: 0px;
+}
+
+
 
 .city {
   font-size: 30px;
@@ -36,26 +72,14 @@ body {
   height: 100%;
 }
 
-.wrapper {
-  height: 100%;
-  font-family: 'Arial', sans-serif;
-  text-align: center;
-}
-
-.hidden {
-  display: none;
-}
-
 #iconDiv {
   float: left;
   width: 180px;
-  height: 300px;
 }
 
 #text {
   float: left;
   /* width: 700px; */
-  height: 300px;
   margin-left: 20px;
   display: block;
   overflow: auto;

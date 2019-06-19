@@ -4,9 +4,10 @@ var chossenDist = "km";
 var chossenTemp = "celsius";
 var idArray = ["date", "icon", "condition", "minTemp", "maxTemp", "avgTemp", "maxWind", "totalPrecip", "avgVis", "avgHumidity", "uv", "sun"];
 
+
+
 function createTable() {
-  document.write('<table class=\"table table-hover \
-		border-bottom\"><thead><tr><th colspan=\"3\"style=\"font-size: 2em;text-align:left; \
+  document.write('<div class=\" table-responsive\"> <table class=\"table w-100\"><thead><tr><th colspan=\"3\"style=\"font-size: 2em;text-align:left; \
 		\">Forecast <\/th><th>Min temp<\/th><th>Max temp<\/th><th>Avg temp<\/th><th>Max wind \
 		speed<\/th><th>Total precipitation<\/th><th>Average visibility<\/th><th>Average humidity\
 		<\/th><th>UV index<\/th><th>Sunrise\/ sunset<\/th><\/tr>');
@@ -14,11 +15,10 @@ function createTable() {
     document.write("<tr>");
     for (var i = 0; i < idArray.length; i++) {
       document.write("<td id = '" + (idArray[i] + j) + "'>" + i + j + "</td>");
-      console.log(idArray[i] + j);
     }
     document.write("</tr>");
   }
-  document.write("	</thead>	</table>");
+  document.write("	</thead> </div>	</table>");
   onLoad();
 }
 
@@ -90,7 +90,7 @@ $(document).ready(function() {
 function onLoad() {
   fetch('https://api.apixu.com/v1/forecast.json?key=b9cfa296afcb457f8cb143741190706&days=7&q=' + input + '&days=7')
     .then((res) => {
-      console.log('https://api.apixu.com/v1/forecast.json?key=b9cfa296afcb457f8cb143741190706&days=7&q=' + input + '&days=7');
+      // console.log('https://api.apixu.com/v1/forecast.json?key=b9cfa296afcb457f8cb143741190706&days=7&q=' + input + '&days=7');
       if (res.status === 400) {
         $('#city').html("Incorrect city name <br>Displaying " + token.location.name);
       }
@@ -98,14 +98,12 @@ function onLoad() {
     })
     .then(json => {
       $.getJSON('https://api.apixu.com/v1/forecast.json?key=b9cfa296afcb457f8cb143741190706&days=7&q=' + input, function(data) {
-        console.log(data);
         token = data;
         $('#city').html(token.location.name);
         $('#icon').attr('src', "https:" + token.current.condition.icon);
         for (var i = 0; i < data.forecast.forecastday.length; i++) {
-          console.log(i);
           $('#date' + i).html(token.forecast.forecastday[i].date);
-          $('#icon' + i).html("<img style = 'width:50px;height:50px;resize: none;' src=https:" + token.forecast.forecastday[i].day.condition.icon + ">");
+          $('#icon' + i).html("<img style = 'width:35px;height:35px;resize: none;' src=https:" + token.forecast.forecastday[i].day.condition.icon + ">");
           $('#condition' + i).html(token.forecast.forecastday[i].day.condition.text);
           date = (data.forecast.forecastday[i].date)
           $("#date" + i).html("<b>" + getDayOfWeek(date) + "</b> </br>" + date);
