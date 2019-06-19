@@ -17,18 +17,18 @@
 	<div class="container-fluid" style="padding:0px;">
 
 
-		<div ="current row col-sm-3" style="padding:0px;">
+		<div="current row col-sm-3" style="padding:0px;">
 
 			<div class="center-block">
-				<h1 clas = ml-5>Weather forecast</h1>
+				<h1 clas=ml-5>Weather forecast</h1>
 			</div>
 			<input class="form-control form-control-sm col-sm-3 mr-3 w-75" style="margin-left: 20px;margin-top: 20px;margin-bottom: 20px;" id="citySearchBar" type="text" placeholder="Search city" aria-label="Search">
-			<i ="fas fa-search" aria-hidden="true"></i>
+			<i="fas fa-search" aria-hidden="true"></i>
 		</div>
-		<div id="iconDiv" class = "table col-3">
-			<img alt="icon" id="icon" style="height:62.5%;width:100%;" class ="table rounded mx-auto d-block center">
+		<div id="iconDiv" class="table col-3">
+			<img alt="icon" id="icon" style="height:62.5%;width:100%;" class="table rounded mx-auto d-block center">
 		</div>
-		<div id="text" class = " table col-md-3 col-sm-12">
+		<div id="text" class=" table col-md-3 col-sm-12">
 			<div>
 				<h1 id="city"></h1>
 				<p id="temp"></p>
@@ -39,34 +39,35 @@
 			</div>
 		</div>
 
-			<div class="row col-sm-3" >
-				<div id = "tempDiv"class ="row col-lg-9 col-sm-6" >
-					<label> Select unit for temperature: &nbsp;&nbsp;&nbsp;&nbsp; </label>
-					<select  class= "mdb-select md-form" onchange="tempUnitChange(this)">
-						<option selected id="celsius">&#8451;</option>
-						<option id="fahrenheit">&#8457;</option>
-					</select>
-				</div>
-				<div  id = "distDiv" class="row col-lg-9 col-sm-6" >
-					<label> Select unit for distance:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-					<select  class= "mdb-select md-form" style="width:100px;" onchange="distUnitChange(this)">
-						<option selected id="km">Kilometers</option>
-						<option id="m">Miles</option>
-					</select>
-				</div>
+		<div class="row col-sm-3">
+			<div id="tempDiv" class="row col-lg-9 col-sm-6">
+				<label> Select unit for temperature: &nbsp;&nbsp;&nbsp;&nbsp; </label>
+				<select class="mdb-select md-form" onchange="tempUnitChange(this)">
+					<option selected id="celsius">&#8451;</option>
+					<option id="fahrenheit">&#8457;</option>
+				</select>
 			</div>
+			<div id="distDiv" class="row col-lg-9 col-sm-6">
+				<label> Select unit for distance:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+				<select class="mdb-select md-form" style="width:100px;" onchange="distUnitChange(this)">
+					<option selected id="km">Kilometers</option>
+					<option id="m">Miles</option>
+				</select>
+			</div>
+		</div>
 
 
 
 	</div>
 
 
-	<link rel="stylesheet" href="css/style.css">
+
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
 	<script src="js/logic.js"></script>
+	<link rel="stylesheet" href="css/style.css">
 
 </body>

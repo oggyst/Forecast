@@ -1,11 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+}
 
-}
-h1 {
-	margin-left:15px;
-}
 td, th {
   /* text-align: center; */
   padding: 0px;
@@ -48,19 +45,6 @@ table {
 
 }
 
-#temp {
-  margin-bottom: 0px;
-}
-
-#descText {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-#des {
-  margin-bottom: 0px;
-}
-
 
 
 .city {
@@ -68,7 +52,6 @@ table {
 }
 
 body {
-  background-color: #efefef;
   height: 100%;
 }
 

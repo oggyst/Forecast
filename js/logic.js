@@ -103,7 +103,7 @@ function onLoad() {
         $('#icon').attr('src', "https:" + token.current.condition.icon);
         for (var i = 0; i < data.forecast.forecastday.length; i++) {
           $('#date' + i).html(token.forecast.forecastday[i].date);
-          $('#icon' + i).html("<img style = 'width:35px;height:35px;resize: none;' src=https:" + token.forecast.forecastday[i].day.condition.icon + ">");
+          $('#icon' + i).html("<img  alt = 'error' style =  'width:35px;height:35px;resize: none;' src=https:" + token.forecast.forecastday[i].day.condition.icon + ">");
           $('#condition' + i).html(token.forecast.forecastday[i].day.condition.text);
           date = (data.forecast.forecastday[i].date)
           $("#date" + i).html("<b>" + getDayOfWeek(date) + "</b> </br>" + date);
