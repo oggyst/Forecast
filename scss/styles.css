@@ -1,0 +1,329 @@
+html {
+  height: 100%;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  min-width: 360px;
+}
+
+body div.st-nav-bar {
+  min-height: 80px;
+  width: 100%;
+  background-color: black;
+  z-index: -1;
+}
+
+body div.st-nav-bar img.st-logo {
+  margin: auto;
+  padding: 5px;
+  height: 70px;
+  margin-left: 5%;
+  z-index: 1;
+  display: block;
+  float: left;
+}
+
+body div.st-nav-bar div.st-nav-holder {
+  float: right;
+  padding-top: 35px;
+  background-color: black;
+  margin-right: 5%;
+}
+
+body div.st-nav-bar div.st-nav-holder div {
+  display: inline-block;
+  color: white;
+  margin: 0px 10px;
+}
+
+body div.st-nav-bar div.st-nav-holder div span.st-notification {
+  padding: 0.5px 5px;
+  border-radius: 50%;
+  background-color: gray;
+  margin: 0px 10px 0px 5px;
+}
+
+body div.st-nav-bar div.st-nav-holder div.st-product {
+  margin: 0px calc((100% - 350px) / 5);
+}
+
+body div.st-nav-bar div.st-nav-holder div.st-company {
+  margin: 0px calc((100% - 350px) / 5);
+}
+
+body div.st-header-image {
+  background-color: #9FBC2E;
+  margin: 0px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  width: 1000px;
+  height: 400px;
+}
+
+body div.st-header-image p.st-description {
+  text-decoration: none;
+  margin: 0px;
+  color: white;
+  font-size: 60px;
+  position: absolute;
+  padding-top: 40%;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  text-align: center;
+  padding-top: 15%;
+}
+
+body div.st-carousel {
+  width: 100%;
+  text-align: center;
+  float: left;
+  background-color: #F7F7F5;
+  font-size: 30px;
+}
+
+body div.st-carousel div.st-span {
+  margin: 5px auto;
+  display: inline-block;
+}
+
+body div.st-carousel div.st-span span {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  opacity: 0.4;
+  margin: 0px 5px;
+  float: left;
+}
+
+body div.st-carousel div.st-span span.selected {
+  background-color: black;
+}
+
+body div.st-carousel div.st-span span.unselected {
+  background-color: gray;
+}
+
+body div.st-grid {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+body div.st-grid div {
+  margin: 30px 0px;
+  text-align: center;
+}
+
+body div.st-grid div i {
+  color: #a8a6a6;
+  font-size: 40px;
+}
+
+body div.st-grid div h1 {
+  font-weight: 400;
+  margin: 10px;
+  font-size: 30px;
+}
+
+body div.st-grid div p {
+  opacity: 0.6;
+  margin: 5px;
+  font-size: 14px;
+}
+
+body div.st-title {
+  width: 100%;
+  background-color: #F7F7F5;
+  height: 100px;
+  margin: 15px 0px;
+  padding: 60px 0px;
+  font-weight: 400;
+  text-align: center;
+}
+
+body div.st-title h1 {
+  margin: 0px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+body p {
+  margin-bottom: 0px;
+  opacity: 0.6;
+}
+
+body div.st-gallery {
+  text-align: center;
+  width: 100%;
+  padding: 15px 0px 35px;
+}
+
+body div.st-gallery h1 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+body div.st-gallery div.st-galery-images {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 240px 240px 240px 240px;
+      grid-template-columns: 240px 240px 240px 240px;
+  margin: auto;
+  max-width: 1000px;
+  text-align: center;
+  grid-column-gap: 15px;
+}
+
+body div.st-gallery div.st-galery-images div {
+  height: 140px;
+  width: 240px;
+  margin: 0px;
+  padding: 0px;
+}
+
+body div.st-gallery div.st-galery-images div span {
+  color: white;
+  font-size: 24px;
+  display: block;
+  margin-top: 58px;
+  opacity: 0.5;
+}
+
+body div.st-gallery div.st-galery-images div.st-image-one {
+  background-color: #9FBC2E;
+}
+
+body div.st-gallery div.st-galery-images div.st-image-two {
+  background-color: #F2BE37;
+}
+
+body div.st-gallery div.st-galery-images div.st-image-three {
+  background-color: #E85857;
+}
+
+body div.st-gallery div.st-galery-images div.st-image-four {
+  background-color: #60B1CE;
+}
+
+body div.st-amazing-template {
+  text-align: center;
+  width: 100%;
+  background-color: #F7F7F5;
+  margin-top: 25px;
+  padding: 25px 0px 45px;
+}
+
+body div.st-amazing-template h1 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+body div.st-amazing-template div.st-span {
+  margin: 5px auto;
+  display: inline-block;
+}
+
+body div.st-amazing-template div.st-span span {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  margin: 0px 5px;
+  opacity: 0.5;
+  float: left;
+}
+
+body div.st-amazing-template div.st-span span.selected {
+  background-color: black;
+}
+
+body div.st-amazing-template div.st-span span.unselected {
+  background-color: gray;
+}
+
+body div.st-footer {
+  display: inline-block;
+  width: 80%;
+  margin: 20px 10%;
+}
+
+body div.st-footer p.st-copyrights {
+  float: left;
+}
+
+body div.st-footer p.st-design-team {
+  color: #808660;
+  font-weight: 700;
+  float: right;
+}
+
+@media (max-width: 620px) {
+  div.st-nav-bar img.st-logo {
+    margin: auto;
+    float: none;
+  }
+  body div.st-nav-bar div.st-nav-holder {
+    width: 100%;
+    margin-right: 0px;
+    padding-top: 0px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 740px) {
+  body div.st-footer {
+    width: 100%;
+    margin: auto;
+  }
+  body div.st-footer p.st-design-team {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin: 5px 0px;
+  }
+  body div.st-footer p.st-copyrights {
+    float: left;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1100px) {
+  div.st-header-image {
+    width: 100%;
+    min-width: 360px;
+    height: 0px;
+    padding-top: 40%;
+    position: relative;
+  }
+}
+
+@media (max-width: 1100px) {
+  body div.st-gallery div.st-galery-images {
+    grid-row: auto auto;
+    -ms-grid-columns: 240px 240px;
+    grid-template-columns: 240px 240px;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    max-width: 550px;
+  }
+}
+
+@media (max-width: 1220px) {
+  body div.st-grid {
+    grid-row: auto auto;
+    -ms-grid-columns: auto auto;
+    grid-template-columns: auto auto;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

@@ -2,72 +2,87 @@
 <html lang="en">
 
 <head>
-
-	<title>Forecast</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<meta name="description" content="Forecast">
-	<meta name="keywords" content="HTML,CSS,bootstrap,JavaScript">
-	<meta name="author" content="Ognjen">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./scss/styles.css">
+    <script src="https://kit.fontawesome.com/3d110c4fdd.js"></script>
+    <title>Document</title>
 </head>
 
-
 <body>
-
-	<div class="container-fluid" style="padding:0px;">
-
-
-		<div="current row col-sm-3" style="padding:0px;">
-
-			<div class="center-block">
-				<h1 clas=ml-5>Weather forecast</h1>
-			</div>
-			<input class="form-control form-control-sm col-sm-3 mr-3 w-75" style="margin-left: 20px;margin-top: 20px;margin-bottom: 20px;" id="citySearchBar" type="text" placeholder="Search city" aria-label="Search">
-			<i="fas fa-search" aria-hidden="true"></i>
-		</div>
-		<div id="iconDiv" class="table col-3">
-			<img alt="icon" id="icon" style="height:62.5%;width:100%;" class="table rounded mx-auto d-block center">
-		</div>
-		<div id="text" class=" table col-md-3 col-sm-12">
-			<div>
-				<h1 id="city"></h1>
-				<p id="temp"></p>
-				<h2 id="descText"></h2>
-				<p id="desc"></p>
-
-
-			</div>
-		</div>
-
-		<div class="row col-sm-3">
-			<div id="tempDiv" class="row col-lg-9 col-sm-6">
-				<label> Select unit for temperature: &nbsp;&nbsp;&nbsp;&nbsp; </label>
-				<select class="mdb-select md-form" onchange="tempUnitChange(this)">
-					<option selected id="celsius">&#8451;</option>
-					<option id="fahrenheit">&#8457;</option>
-				</select>
-			</div>
-			<div id="distDiv" class="row col-lg-9 col-sm-6">
-				<label> Select unit for distance:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-				<select class="mdb-select md-form" style="width:100px;" onchange="distUnitChange(this)">
-					<option selected id="km">Kilometers</option>
-					<option id="m">Miles</option>
-				</select>
-			</div>
-		</div>
-
-
-
-	</div>
-
-
-
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-	<script src="js/logic.js"></script>
-	<link rel="stylesheet" href="css/style.css">
-
+    <div class="st-nav-bar">
+        <img class="st-logo" src="./img/site-logo.png" alt="Missing file">
+        <div class="st-nav-holder">
+            <div class="st-home">Home</div>
+            <div class="st-product">Product <span class="st-notification">6</span></div>
+            <div class="st-company">Company <span class="st-notification">2</span></div>
+            <div class="st-contact">Contact</div>
+        </div>
+    </div>
+    <div class="st-header-image">
+        <p class="st-description">Header Image</p>
+    </div>
+    <div class="st-carousel">Amazing responsive carousel
+        <br>
+        <div class="st-span"><span class="selected"></span>
+            <span class="unselected"></span>
+            <span class="unselected"></span>
+        </div>
+    </div>
+    <div class="st-grid">
+        <div class="st-about">
+            <i class="fas fa-paper-plane"></i>
+            <h1> About </h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum mauris sit amet
+                consectetur convallis. Etiam vel ornare nulla. </p>
+        </div>
+        <div class="st-company">
+            <i class="fas fa-star"></i>
+            <h1>Company</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum mauris sit amet
+                consectetur convallis. Etiam vel ornare nulla. </p>
+        </div>
+        <div class="st-services">
+            <i class="fas fa-comment"></i>
+            <h1>Services</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum mauris sit amet
+                consectetur convallis. Etiam vel ornare nulla. </p>
+        </div>
+        <div class="st-contact">
+            <i class="fas fa-envelope"></i>
+            <h1>Contact</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum mauris sit amet
+                consectetur convallis. Etiam vel ornare nulla. </p>
+        </div>
+    </div>
+    <div class="st-title">
+        <h1>Amazing title</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum mauris sit amet
+            consectetur convallis. Etiam vel ornare nulla. </p>
+    </div>
+    <div class="st-gallery">
+        <h1>Gallery</h1>
+        <div class="st-galery-images">
+            <div class="st-image-one"><span>Gallery Image</span></div>
+            <div class="st-image-two"><span>Gallery Image</span></div>
+            <div class="st-image-three"><span>Gallery Image</span></div>
+            <div class="st-image-four"><span>Gallery Image</span></div>
+        </div>
+    </div>
+    <div class="st-amazing-template">
+        <h1>Amazing responsive template</h1>
+        <p>Lorem ipsut dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+            dolore magna allquam erat volutpat.<br> Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+            suscipit lobortis nisl ut allquip ex ea commodo consequat.<br></p>
+        <div class="st-span"><span class="selected"></span>
+            <span class="unselected"></span>
+            <span class="unselected"></span>
+        </div>
+    </div>
+    <div class="st-footer">
+        <p class="st-copyrights">Copyright 2018. Vision Design - graphic zoo</p>
+        <p class="st-design-team">Design and coding by Responsee Team</p>
+    </div>
 </body>
+</html>
